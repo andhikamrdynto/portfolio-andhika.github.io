@@ -1,197 +1,260 @@
 *, *::after, *::before {
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-  background-color: #27374D;
+body {
+  background-color: #1F1D36;
 }
 
 .navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #1F1D36;
   z-index: 99;
 }
 
 .navbarscroll {
-  background-color: #27374dc9;
-  backdrop-filter: blur(4px);
-  border-bottom: rgba(128, 128, 128, 0.221) solid 1px;
-}
-/* home */
-#home {
-  height: 100vh;
+  background-color: #1f1d36ce;
+  backdrop-filter: blur(7px);
 }
 
-.h1-home {
-  line-height: 2.8rem;
-}
-
-.img-home {
-  width: 370px;
-  height: 370px;
-  border: #9DB2BF solid;
-  border-width: 4px 5px 4px 12px;
-  border-radius: 200px 20px 200px 30px;
-}
-/* end home */
-
-/* about */
-#about {
-  background-color: #9DB2BF;
-}
-/* end about */
-
-/* portfolio */
-.portfolio-img{
-  box-shadow: rgba(14, 30, 37, 0.038) 0px 2px 4px 0px, rgba(14, 30, 37, 0.137) 0px 2px 16px 0px;
-  transition: all 0.5s ease;
-}
-.portfolio-img:hover{
-  transform: scale(0.9);
-  transition: all 0.5s ease;
-}
-/* end portfolio */
-
-/* skills */
-
-#skills {
-  background-color: #9DB2BF;
-}
-
-.box-skills{
-  width: 150px;
-  height: 150px;
-  box-shadow: rgba(14, 30, 37, 0.038) 0px 2px 4px 0px, rgba(14, 30, 37, 0.137) 0px 2px 16px 0px;
-  position: relative;
-}
-
-.box-skills:nth-child(1):hover:after{
-  content: 'HTML';
-  width: 150px;
-  height: 150px;
+.nav-item::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #712B75;
+  border-radius: 10px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(2):hover:after{
-  content: 'CSS';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(3):hover:after{
-  content: 'Javascript';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(4):hover:after{
-  content: 'PHP';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(5):hover:after{
-  content: 'Laravel';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(6):hover:after{
-  content: 'Figma';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(7):hover:after{
-  content: 'Bootstrap';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-.box-skills:nth-child(8):hover:after{
-  content: 'Tailwind css';
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  line-height: 150px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.434);
-  backdrop-filter: blur(1px);
-  border-radius: 0.375rem;
-  font-weight: bold;
+  bottom: 0;
 }
 
-.box-skills img{
+.nav-link {
+  color: white;
+}
+
+.nav-item:hover::before{
+  transition: all ease-in 0.2s;
   width: 100%;
 }
 
-#contact {
-  height: 100vh;
+.nav-item:hover .nav-link{
+  color: rgb(204, 202, 202);
 }
 
-.box-contact {
-  box-shadow: rgba(14, 30, 37, 0.038) 0px 2px 4px 0px, rgba(14, 30, 37, 0.137) 0px 2px 16px 0px;
+#home {
+  height: 90vh;
+}
+
+#home h1 {
+  line-height: 3.7rem;
+}
+
+.img-home {
+  max-width: 420px;
+  max-height: 420px ;
+  border: solid #712B75;
+  border-width: 10px 5px 20px 20px;
+  border-radius: 10% 50% 10% 50%;
+}
+
+#about h3{
+  color: #712B75;
+}
+
+.text-icon {
+  color: white;
+}
+
+.text-icon:hover {
+  color: #712B75;
+  transition: all 0.2s ease-in;
+}
+
+#portfolio {
+  background-color: #712B75;
+}
+
+#portfolio h3 {
+  color: #1F1D36;
+}
+
+#portfolio .card {
+  max-width: 22.5rem;
+  background-color: #1F1D36;
+}
+
+#portfolio .card:hover {
+  transform: scale(0.9);
+}
+
+#skills h3 {
+  color: #712B75;
+}
+
+#skills .card {
+  background-color: #712B75;
+  position: relative;
+}
+
+#skills .card:nth-child(1):hover.card::after {
+  content: 'HTML';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(2):hover.card::after {
+  content: 'CSS';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(3):hover.card::after {
+  content: 'Javascript';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(4):hover.card::after {
+  content: 'PHP';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(5):hover.card::after {
+  content: 'Laravel';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(6):hover.card::after {
+  content: 'Bootstrap';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(7):hover.card::after {
+  content: 'Tailwind css';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+#skills .card:nth-child(8):hover.card::after {
+  content: 'Figma';
+  font-size: 20px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #712b75c6;
+  backdrop-filter: blur(2px);
+}
+
+#certificate h3 {
+  color: #712B75;
+}
+
+#certificate .card {
+  max-width: 400px;
+  background-color: #712B75;
+}
+
+#contact {
+  background-color: #712B75;
+}
+
+#contact h3 {
+  color: #1F1D36;
+}
+
+#contact .card {
+  max-width: 30rem;
+  background-color: #1F1D36;
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #home h1 {
+    line-height: 2.7rem;
+  }
+  .img-home{ 
+    max-width: 340px;
+    max-height: 340px;
+  }
 }
