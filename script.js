@@ -1,5 +1,5 @@
 window.onscroll = function () {navbarScroll()};
-window.onload =function () {navbarScroll()};
+window.onload = function () {navbarScroll()};
 
 function navbarScroll() {
     var navbar = document.querySelector('.navbar');
