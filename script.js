@@ -1,8 +1,8 @@
 window.onscroll = function () {navbarScroll()};
 window.onload = function () {navbarScroll()};
 
+var navbar = document.querySelector('.navbar');
 function navbarScroll() {
-    var navbar = document.querySelector('.navbar');
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
         navbar.classList.add('navbarscroll');
     } else {
@@ -15,8 +15,8 @@ function sendWa() {
 }
 
 function sendEmail() {
-    var judulInput = document.getElementById("judul");
-    var pesanInput = document.getElementById("pesan");
+    let judulInput = document.getElementById("judul");
+    let pesanInput = document.getElementById("pesan");
     if (judulInput.value !== "" || pesanInput.value !== "") {
         location.href = `mailto:andhikamardyanto47@gmail.com?subject=${judulInput.value}&body=${pesanInput.value}`
     } else {
